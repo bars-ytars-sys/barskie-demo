@@ -1,0 +1,47 @@
+---
+import { link, nav, site } from '../data/site';
+
+---
+
+<section class="wrap pt-16 pb-24 sm:pt-20 sm:pb-32" id="contacts" aria-labelledby="contacts-title">
+  <div class="grid gap-6 lg:grid-cols-[1.1fr_1fr]" data-reveal>
+    <div>
+      <p class="eyebrow">Контакты</p>
+      <h2 id="contacts-title" class="h-section mt-3">Приезжайте в&nbsp;гости</h2>
+      <address class="mt-5 max-w-md text-muted not-italic">{site.address}</address>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href={site.yandexMaps} target="_blank" rel="noopener" class="btn-dark flex-1 sm:flex-none">Построить маршрут</a>
+        <a href={site.telegram} target="_blank" rel="noopener" class="btn-ghost">Telegram</a>
+      </div>
+    </div>
+    <div class="card grid content-center gap-2 bg-mint-soft p-6 sm:p-8">
+      <p class="text-sm text-muted">Отдел бронирования, ежедневно 9:00–24:00</p>
+      <a href={site.phoneHref} class="font-display text-3xl sm:text-4xl">{site.phone}</a>
+      <p class="text-sm text-muted">Сотрудничество: <a class="underline" href={`mailto:${site.email}`}>{site.email}</a></p>
+    </div>
+  </div>
+</section>
+
+<footer id="kontakty" class="relative bg-night text-white">
+  {/* Мягкие холмы над подвалом */}
+  <svg class="pointer-events-none absolute bottom-full left-0 h-14 w-full text-night sm:h-20" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 70 C180 25 320 85 520 55 C720 25 860 90 1060 60 C1230 35 1340 65 1440 45 L1440 100 L0 100 Z" fill="currentColor" opacity="0.35" />
+    <path d="M0 85 C200 55 380 100 600 75 C820 50 980 100 1200 78 C1320 66 1390 80 1440 72 L1440 100 L0 100 Z" fill="currentColor" />
+  </svg>
+  <div class="wrap grid grid-cols-2 gap-x-6 gap-y-8 py-12 sm:py-14 md:grid-cols-[1.3fr_1fr_1fr]">
+    <div class="col-span-2 md:col-span-1">
+      <p class="font-display text-xl uppercase">Барские поля</p>
+      <p class="mt-3 max-w-sm text-sm text-white/65">15 загородных домов с банными чанами, личной территорией и местом для неспешного отдыха.</p>
+      
+    </div>
+    <nav aria-label="Разделы сайта">
+      <ul class="grid gap-2.5 text-sm text-white/80">
+        {nav.slice(0, 5).map((i) => <li><a class="hover:text-mint" href={link(i.href)}>{i.label}</a></li>)}
+      </ul>
+    </nav>
+    <ul class="grid gap-2.5 text-sm text-white/80">
+      {nav.slice(5).map((i) => <li><a class="hover:text-mint" href={link(i.href)}>{i.label}</a></li>)}
+    </ul>
+  </div>
+  <div class="wrap border-t border-white/10 py-5 text-xs text-white/60">Демо нового сайта · закрыто от индексации</div>
+</footer>

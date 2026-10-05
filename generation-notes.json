@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-05",
+  "house": "Барский дом",
+  "imageTool": "Built-in ImageGen",
+  "imagePrompt": "EDIT the ORIGINAL input real photograph, not a new scene. Near-identical minimally edited early-autumn version, same original 3:2 photograph composition, camera, crop, blue sky, clouds, afternoon daylight, exposure and colour grading. LOCK every building and item pixel-position: exactly same wooden house, roof structure, window/door shapes and counts, porch stairs, lawn, fence, pergola, table, chairs, deer-shaped barbecue. LOCK vegetation structure: exactly the same trees and forest line, no new trees, no taller trees behind the house, no missing trees, the same evergreen spruce on left stays completely unchanged and green. ONLY change existing deciduous foliage colours VERY SUBTLY from summer green to realistic early October muted olive, ochre and pale amber; retain plenty of green. Do not change the sky, do not add sun, sunset glow, orange colour cast, interior lights, steam, smoke, magical atmosphere, leaves falling or carpet of leaves, no snow, no people, no new amenities. This must look like the same straightforward real-estate photograph taken in early autumn, understated and documentary, virtually 1:1 with the source. Prioritize faithful house and garden over visual drama.",
+  "imageSource": "C:/Users/ASON/Desktop/Ber&Bar/local-redesign/export-photos/ready/bp/Барский дом/001.jpg",
+  "imageOutput": "src/assets/barski-autumn-hero.webp",
+  "videoModel": "kling-3.0/video",
+  "videoTask": "c547f8a0e859f8062e1ae49907b415bd",
+  "videoCredits": 70,
+  "videoPrompt": "Static camera and fixed original photo composition. Only a very subtle breeze in the existing tree foliage and pergola curtains. Keep the real wooden house, window count, roof, garden furniture, fence, deer-shaped barbecue, sky, daylight and colours exactly stationary and unchanged. No people, no new objects or amenities, no glowing windows, no sunset, no dramatic lighting, no morphing, no camera move. Quiet natural documentary realism.",
+  "limitation": "AI-перегенерация сохраняет вид и композицию, но не является пиксельно точной копией. Видео имеет небольшое движение камеры; 6 кадров просмотрены.",
+  "videoLoop": {
+    "date": "2026-10-05",
+    "request": "поставить на фон видео как в демке Берёзовой рощи, с зацикливанием",
+    "method": "ping-pong: тот же клип проигрывается вперёд, затем назад — стык кадр в кадр",
+    "duration": "10,08 с, 242 кадра, первый и последний кадр совпадают",
+    "files": {
+      "public/video/hero.webm": "0,86 МБ (VP9, crf 32, 1176x780)",
+      "public/video/hero.mp4": "1,23 МБ (H.264, crf 23, 1176x780)",
+      "public/video/hero-mobile.mp4": "0,38 МБ (H.264, crf 27, 814x540)"
+    },
+    "previous": "hero.mp4 0,55 МБ и hero-mobile.mp4 0,17 МБ — 5,04 с без зацикливания (копия: Ber&Bar/local-redesign/proof/bp-hero-video/backup-5s/)",
+    "credits": 0,
+    "note": "Новая генерация не запускалась: зациклен тот же клип Kling (task c547f8a0e859f8062e1ae49907b415bd), кредиты не тратились. В разметке видео теперь собирается из списка источников webm + mp4, как в демке БР."
+  },
+  "tools": "Ber&Bar/local-redesign/tools-video/ (gen-video.mjs — генерация, zaciklit-video.mjs — петля, proverka-glavnoy.mjs — проверка первого экрана)"
+}
